@@ -1,5 +1,0 @@
-# This file ensures the data directory is tracked by Git
-# The directory is needed for storing:
-# - FAISS indices
-# - Metadata
-# - Evaluation results

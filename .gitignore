@@ -1,18 +1,8 @@
-# AIRMAN Aviation RAG System - Git Ignore File
-
-# ============================================================================
 # Python
-# ============================================================================
-
-# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
-
-# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -26,356 +16,68 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
 
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-.pybuilder/
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# pipenv
-Pipfile.lock
-
-# poetry
-poetry.lock
-
-# pdm
-.pdm.toml
-
-# PEP 582
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
+# Virtual Environment
 venv/
+env/
 ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# ============================================================================
-# Project Specific - Data Files
-# ============================================================================
-
-# FAISS indices (large binary files)
-data/faiss_index/index.faiss
-data/faiss_index/index.pkl
-data/faiss_index/bm25_index.pkl
-
-# Metadata and results (generated files)
-data/metadata.json
-data/eval_results.json
-data/hybrid_comparison.json
-
-# Keep data directory structure
-!data/.gitkeep
-!data/faiss_index/.gitkeep
-
-# ============================================================================
-# Project Specific - Logs
-# ============================================================================
-
-# Ingestion logs
-ingestion.log
-ingestion_fast.log
-*.log
-
-# ============================================================================
-# Project Specific - Documents
-# ============================================================================
-
-# PDF documents (too large for Git)
-documents/**/*.pdf
-documents/**/*.PDF
-
-# Keep documents directory structure
-!documents/.gitkeep
-!documents/Air Navigation/.gitkeep
-!documents/Meteorology/.gitkeep
-
-# Exception: Keep sample/small files if needed
-# !documents/sample.pdf
-
-# ============================================================================
-# IDE / Editor
-# ============================================================================
-
-# VSCode
+# IDE
 .vscode/
-*.code-workspace
-
-# PyCharm
 .idea/
-*.iml
-*.iws
-*.ipr
-
-# Sublime Text
-*.sublime-project
-*.sublime-workspace
-
-# Vim
 *.swp
 *.swo
 *~
-.vim/
-
-# Emacs
-*~
-\#*\#
-/.emacs.desktop
-/.emacs.desktop.lock
-*.elc
-
-# ============================================================================
-# Operating System
-# ============================================================================
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-._*
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# Windows
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
-*.stackdump
-[Dd]esktop.ini
-$RECYCLE.BIN/
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-*.lnk
-
-# Linux
-*~
-.fuse_hidden*
-.directory
-.Trash-*
-.nfs*
-
-# ============================================================================
-# Backup Files
-# ============================================================================
-
-*.bak
-*.backup
-*.old
-*.orig
-*.tmp
-*.temp
-
-# ============================================================================
-# Compressed Files
-# ============================================================================
-
-*.zip
-*.tar
-*.tar.gz
-*.tgz
-*.rar
-*.7z
-
-# ============================================================================
-# Model Files (if storing locally)
-# ============================================================================
-
-# Hugging Face cache
-.cache/
-models/
-*.bin
-*.safetensors
-
-# Ollama models (stored elsewhere)
-# No need to track
-
-# ============================================================================
-# Secrets & Configuration
-# ============================================================================
 
 # Environment variables
 .env
 .env.local
 .env.*.local
-secrets.json
-credentials.json
 
-# API keys
-*.key
-*.pem
-*.cert
+# Logs
+*.log
+aviation_rag/ingestion.log
+aviation_rag/ingestion_fast.log
 
-# ============================================================================
+# Data files (generated/cached)
+aviation_rag/data/faiss_index/*.faiss
+aviation_rag/data/faiss_index/*.pkl
+aviation_rag/data/*.json
+
+# Keep .gitkeep files
+!aviation_rag/data/.gitkeep
+!aviation_rag/data/faiss_index/.gitkeep
+
+# Documents (large PDFs)
+aviation_rag/documents/**/*.pdf
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
 # Testing
-# ============================================================================
-
-# Test outputs
-test_output/
-test_results/
+.pytest_cache/
 .coverage
 htmlcov/
+.tox/
 
-# ============================================================================
-# Deployment
-# ============================================================================
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
 
-# Docker
-.dockerignore
+# Temporary docs
+optimize_ollama.md
+enable_gpu_ollama.md
 
-# Kubernetes
-*.kubeconfig
-
-# Terraform
-*.tfstate
-*.tfstate.*
-.terraform/
-
-# ============================================================================
-# Miscellaneous
-# ============================================================================
-
-# Temporary files
-tmp/
-temp/
-*.tmp
-
-# Lock files
-*.lock
-
-# Node modules (if using any JS tools)
-node_modules/
-
-# ============================================================================
-# Keep These Files
-# ============================================================================
-
-# Configuration templates
-!.env.example
-!config.example.py
-
-# Sample data
-!questions.json
-!report.md
-
-# Documentation
-!*.md
-!LICENSE
-!README.md
-
-# Templates
-!templates/
-!templates/**/*
-
-# Requirements
-!requirements.txt
-!requirements-dev.txt
-
-# ============================================================================
-# End of .gitignore
-# ============================================================================
+# OS
+Thumbs.db
+.DS_Store
