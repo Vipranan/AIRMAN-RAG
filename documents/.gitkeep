@@ -1,0 +1,11 @@
+# This file ensures the documents directory is tracked by Git
+# Place your PDF documents here for ingestion
+# 
+# Recommended structure:
+# documents/
+# ├── Air Navigation/
+# ├── Meteorology/
+# └── Other categories/
+#
+# Note: PDF files are not tracked by Git (too large)
+# Share documents separately or use Git LFS

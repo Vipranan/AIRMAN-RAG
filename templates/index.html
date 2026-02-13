@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIRMAN - Aviation Document AI Chat</title>
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f7fa;
+            --bg-chat: #ffffff;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --accent-primary: #0066cc;
+            --accent-hover: #0052a3;
+            --user-msg-bg: #0066cc;
+            --user-msg-text: #ffffff;
+            --bot-msg-bg: #f0f0f0;
+            --bot-msg-text: #1a1a1a;
+            --citation-bg: #e8f4fd;
+            --citation-border: #0066cc;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --bg-chat: #242424;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --border-color: #404040;
+            --accent-primary: #3399ff;
+            --accent-hover: #5cadff;
+            --user-msg-bg: #3399ff;
+            --user-msg-text: #ffffff;
+            --bot-msg-bg: #2d2d2d;
+            --bot-msg-text: #e0e0e0;
+            --citation-bg: #1f3a52;
+            --citation-border: #3399ff;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+
+        .logo-text p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .status-badge.online {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-badge.offline {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        [data-theme="dark"] .status-badge.online {
+            background: #1e4620;
+            color: #7dff8a;
+        }
+
+        [data-theme="dark"] .status-badge.offline {
+            background: #4a1f1f;
+            color: #ff7d7d;
+        }
+
+        .theme-toggle {
+            background: var(--bg-chat);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-primary);
+            transition: all 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background: var(--accent-primary);
+            color: white;
+            border-color: var(--accent-primary);
+        }
+
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+            background: var(--bg-chat);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .message {
+            margin-bottom: 1.5rem;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message-user {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .message-bot {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            line-height: 1.6;
+        }
+
+        .message-user .message-content {
+            background: var(--user-msg-bg);
+            color: var(--user-msg-text);
+            border-bottom-right-radius: 4px;
+        }
+
+        .message-bot .message-content {
+            background: var(--bot-msg-bg);
+            color: var(--bot-msg-text);
+            border-bottom-left-radius: 4px;
+        }
+
+        .citations {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background: var(--citation-bg);
+            border-left: 3px solid var(--citation-border);
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+
+        .citations-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--accent-primary);
+        }
+
+        .citation-item {
+            margin: 0.25rem 0;
+            color: var(--text-secondary);
+        }
+
+        .faithfulness-score {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .input-container {
+            display: flex;
+            gap: 1rem;
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 -2px 8px var(--shadow);
+        }
+
+        #questionInput {
+            flex: 1;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            background: var(--bg-chat);
+            color: var(--text-primary);
+            transition: border-color 0.3s;
+        }
+
+        #questionInput:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        #askButton {
+            padding: 1rem 2rem;
+            background: var(--accent-primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #askButton:hover:not(:disabled) {
+            background: var(--accent-hover);
+        }
+
+        #askButton:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .welcome-message {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .welcome-message h2 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .sample-questions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .sample-question {
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .sample-question:hover {
+            background: var(--accent-primary);
+            color: white;
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow);
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 3px solid #dc3545;
+        }
+
+        [data-theme="dark"] .error-message {
+            background: #4a1f1f;
+            color: #ff7d7d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">✈️</div>
+                <div class="logo-text">
+                    <h1>AIRMAN</h1>
+                    <p>Aviation Document AI Assistant</p>
+                </div>
+            </div>
+            <div class="header-controls">
+                <div class="status-badge" id="statusBadge">
+                    <span id="statusText">Checking...</span>
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <span id="themeIcon">🌙</span>
+                    <span id="themeText">Dark</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="chat-container">
+            <div class="messages" id="messages">
+                <div class="welcome-message">
+                    <h2>Welcome to AIRMAN</h2>
+                    <p>Ask questions about aviation documents including PPL/CPL/ATPL textbooks, SOPs, and Flight Manuals.</p>
+                    <div class="sample-questions">
+                        <div class="sample-question" onclick="askSample('What are the main types of clouds?')">
+                            What are the main types of clouds?
+                        </div>
+                        <div class="sample-question" onclick="askSample('What is the purpose of mass and balance calculations?')">
+                            What is the purpose of mass and balance calculations?
+                        </div>
+                        <div class="sample-question" onclick="askSample('Explain radio navigation principles')">
+                            Explain radio navigation principles
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    id="questionInput" 
+                    placeholder="Ask a question about aviation..." 
+                    onkeypress="handleKeyPress(event)"
+                />
+                <button id="askButton" onclick="askQuestion()">
+                    <span id="buttonText">Ask</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme management
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeText = document.getElementById('themeText');
+        const html = document.documentElement;
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeButton(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeButton(newTheme);
+        });
+
+        function updateThemeButton(theme) {
+            if (theme === 'dark') {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Light';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Dark';
+            }
+        }
+
+        // Check system status
+        async function checkStatus() {
+            try {
+                const response = await fetch('/health');
+                const data = await response.json();
+                
+                const statusBadge = document.getElementById('statusBadge');
+                const statusText = document.getElementById('statusText');
+                
+                if (data.index_loaded && data.ollama_reachable) {
+                    statusBadge.className = 'status-badge online';
+                    statusText.textContent = `Online (${data.total_chunks} chunks)`;
+                } else {
+                    statusBadge.className = 'status-badge offline';
+                    statusText.textContent = 'Offline';
+                }
+            } catch (error) {
+                const statusBadge = document.getElementById('statusBadge');
+                const statusText = document.getElementById('statusText');
+                statusBadge.className = 'status-badge offline';
+                statusText.textContent = 'Error';
+            }
+        }
+
+        // Ask question
+        async function askQuestion() {
+            const input = document.getElementById('questionInput');
+            const question = input.value.trim();
+            
+            if (!question) return;
+            
+            // Clear input and disable button
+            input.value = '';
+            const button = document.getElementById('askButton');
+            const buttonText = document.getElementById('buttonText');
+            button.disabled = true;
+            buttonText.innerHTML = '<div class="loading"></div>';
+            
+            // Add user message
+            addMessage(question, 'user');
+            
+            try {
+                const response = await fetch('/ask', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ question, top_k: 5 })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Failed to get response');
+                }
+                
+                const data = await response.json();
+                addMessage(data.answer, 'bot', data.citations, data.faithfulness_score);
+                
+            } catch (error) {
+                addMessage('Sorry, I encountered an error. Please try again.', 'bot', null, null, true);
+            } finally {
+                button.disabled = false;
+                buttonText.textContent = 'Ask';
+            }
+        }
+
+        function addMessage(text, type, citations = null, faithfulness = null, isError = false) {
+            const messages = document.getElementById('messages');
+            
+            // Remove welcome message if exists
+            const welcome = messages.querySelector('.welcome-message');
+            if (welcome) {
+                welcome.remove();
+            }
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message message-${type}`;
+            
+            let content = `<div class="message-content">`;
+            
+            if (isError) {
+                content += `<div class="error-message">${text}</div>`;
+            } else {
+                content += text;
+            }
+            
+            if (citations && citations.length > 0) {
+                content += '<div class="citations">';
+                content += '<div class="citations-title">📚 Sources:</div>';
+                citations.forEach(cite => {
+                    content += `<div class="citation-item">• ${cite.doc_name}, Page ${cite.page}</div>`;
+                });
+                if (faithfulness !== null) {
+                    content += `<div class="faithfulness-score">Faithfulness: ${(faithfulness * 100).toFixed(0)}%</div>`;
+                }
+                content += '</div>';
+            }
+            
+            content += '</div>';
+            messageDiv.innerHTML = content;
+            messages.appendChild(messageDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        function askSample(question) {
+            document.getElementById('questionInput').value = question;
+            askQuestion();
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                askQuestion();
+            }
+        }
+
+        // Initialize
+        checkStatus();
+        setInterval(checkStatus, 30000); // Check every 30 seconds
+    </script>
+</body>
+</html>

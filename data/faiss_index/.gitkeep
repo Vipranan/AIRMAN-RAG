@@ -1,0 +1,5 @@
+# This file ensures the faiss_index directory is tracked by Git
+# The directory is needed for storing:
+# - index.faiss (FAISS vector index)
+# - index.pkl (FAISS metadata)
+# - bm25_index.pkl (BM25 index for Level 2)

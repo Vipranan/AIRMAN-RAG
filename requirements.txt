@@ -1,0 +1,35 @@
+# Core dependencies
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+jinja2>=3.1.0
+
+# LangChain (compatible with Python 3.12)
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-core>=0.3.0
+
+# PDF processing
+pypdf>=3.17.0
+
+# Embeddings
+sentence-transformers>=2.3.0
+langchain-huggingface>=0.1.0
+
+# Hybrid Retrieval (Level 2)
+rank-bm25>=0.2.2
+
+# Vector search
+faiss-cpu>=1.8.0
+
+# HTTP client
+requests>=2.31.0
+
+# Logging
+loguru>=0.7.0
+
+# Evaluation
+tabulate>=0.9.0
+
+# PyTorch for GPU support
+torch>=2.0.0

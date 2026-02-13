@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "category": "factual",
+      "question": "What does VFR stand for and what does it require?",
+      "ground_truth": "",
+      "expected_keywords": ["Visual Flight Rules", "visibility", "cloud clearance"],
+      "source_hint": "PPL Textbook — Air Law / Meteorology chapter"
+    },
+    {
+      "id": 2,
+      "category": "factual",
+      "question": "What is the minimum safe altitude over a congested area?",
+      "ground_truth": "",
+      "expected_keywords": ["1000 feet", "highest obstacle", "congested"],
+      "source_hint": "PPL Textbook — Air Law"
+    },
+    {
+      "id": 3,
+      "category": "factual",
+      "question": "Define ATPL and list the privileges it grants.",
+      "ground_truth": "",
+      "expected_keywords": ["Airline Transport Pilot License", "commercial air transport", "captain"],
+      "source_hint": "ATPL Textbook — Licensing"
+    },
+    {
+      "id": 4,
+      "category": "factual",
+      "question": "What are the three types of hypoxia?",
+      "ground_truth": "",
+      "expected_keywords": ["hypoxic", "anaemic", "stagnant", "histotoxic"],
+      "source_hint": "CPL/ATPL Textbook — Human Performance"
+    },
+    {
+      "id": 5,
+      "category": "factual",
+      "question": "What is the purpose of a pre-flight checklist?",
+      "ground_truth": "",
+      "expected_keywords": ["safety", "systematic", "aircraft airworthy"],
+      "source_hint": "SOP/Checklist"
+    },
+    {
+      "id": 6,
+      "category": "factual",
+      "question": "What does METAR stand for?",
+      "ground_truth": "",
+      "expected_keywords": ["Meteorological Aerodrome Report", "weather"],
+      "source_hint": "PPL/CPL Textbook — Meteorology"
+    },
+    {
+      "id": 7,
+      "category": "factual",
+      "question": "What is the standard temperature lapse rate in the troposphere?",
+      "ground_truth": "",
+      "expected_keywords": ["2 degrees", "1000 feet", "lapse rate"],
+      "source_hint": "ATPL Textbook — Meteorology"
+    },
+    {
+      "id": 8,
+      "category": "factual",
+      "question": "What is V1 speed?",
+      "ground_truth": "",
+      "expected_keywords": ["decision speed", "takeoff", "continue", "abort"],
+      "source_hint": "AFM/POH — Performance"
+    },
+    {
+      "id": 9,
+      "category": "factual",
+      "question": "What does the acronym PAVE stand for in risk assessment?",
+      "ground_truth": "",
+      "expected_keywords": ["Pilot", "Aircraft", "Environment", "External pressures"],
+      "source_hint": "PPL Textbook — Human Factors"
+    },
+    {
+      "id": 10,
+      "category": "factual",
+      "question": "What is the maximum demonstrated crosswind component for this aircraft?",
+      "ground_truth": "",
+      "expected_keywords": ["crosswind", "knots", "demonstrated"],
+      "source_hint": "AFM/POH — Limitations"
+    },
+    {
+      "id": 11,
+      "category": "factual",
+      "question": "What are the required documents that must be on board an aircraft?",
+      "ground_truth": "",
+      "expected_keywords": ["registration", "airworthiness", "operating limitations", "weight and balance"],
+      "source_hint": "PPL Textbook — Air Law"
+    },
+    {
+      "id": 12,
+      "category": "factual",
+      "question": "What is the definition of IFR?",
+      "ground_truth": "",
+      "expected_keywords": ["Instrument Flight Rules", "weather conditions", "instruments"],
+      "source_hint": "CPL Textbook — Air Law"
+    },
+    {
+      "id": 13,
+      "category": "factual",
+      "question": "What is the purpose of the pitot tube?",
+      "ground_truth": "",
+      "expected_keywords": ["airspeed", "dynamic pressure", "ram air"],
+      "source_hint": "PPL Textbook — Instruments"
+    },
+    {
+      "id": 14,
+      "category": "factual",
+      "question": "What does QNH represent?",
+      "ground_truth": "",
+      "expected_keywords": ["altimeter setting", "sea level", "pressure"],
+      "source_hint": "PPL Textbook — Instruments / Meteorology"
+    },
+    {
+      "id": 15,
+      "category": "factual",
+      "question": "What is the standard atmospheric pressure at sea level?",
+      "ground_truth": "",
+      "expected_keywords": ["1013.25", "hectopascals", "29.92", "inches"],
+      "source_hint": "ATPL Textbook — Meteorology"
+    },
+    {
+      "id": 16,
+      "category": "factual",
+      "question": "What is the function of ailerons?",
+      "ground_truth": "",
+      "expected_keywords": ["roll", "lateral control", "wings"],
+      "source_hint": "PPL Textbook — Principles of Flight"
+    },
+    {
+      "id": 17,
+      "category": "factual",
+      "question": "What is the definition of density altitude?",
+      "ground_truth": "",
+      "expected_keywords": ["pressure altitude", "temperature", "performance"],
+      "source_hint": "CPL Textbook — Performance"
+    },
+    {
+      "id": 18,
+      "category": "factual",
+      "question": "What is the purpose of trim tabs?",
+      "ground_truth": "",
+      "expected_keywords": ["reduce", "control pressure", "maintain attitude"],
+      "source_hint": "PPL Textbook — Aircraft Systems"
+    },
+    {
+      "id": 19,
+      "category": "factual",
+      "question": "What does CAVOK mean?",
+      "ground_truth": "",
+      "expected_keywords": ["Ceiling And Visibility OK", "visibility", "10 km", "cloud"],
+      "source_hint": "CPL/ATPL Textbook — Meteorology"
+    },
+    {
+      "id": 20,
+      "category": "factual",
+      "question": "What is the maximum takeoff weight listed in the aircraft limitations?",
+      "ground_truth": "",
+      "expected_keywords": ["maximum", "takeoff", "weight", "pounds", "kilograms"],
+      "source_hint": "AFM/POH — Limitations"
+    },
+    {
+      "id": 21,
+      "category": "applied",
+      "question": "If the outside air temperature is higher than standard, how does this affect density altitude and aircraft performance?",
+      "ground_truth": "",
+      "expected_keywords": ["density altitude increases", "performance decreases", "reduced climb"],
+      "source_hint": "CPL Textbook — Performance"
+    },
+    {
+      "id": 22,
+      "category": "applied",
+      "question": "During a pre-flight inspection, you notice a small dent on the leading edge of the wing. What should you do?",
+      "ground_truth": "",
+      "expected_keywords": ["consult", "maintenance", "airworthiness", "MEL"],
+      "source_hint": "SOP/Checklist"
+    },
+    {
+      "id": 23,
+      "category": "applied",
+      "question": "You are planning a VFR flight and the forecast shows visibility of 4 km. Can you legally depart?",
+      "ground_truth": "",
+      "expected_keywords": ["VFR minima", "visibility", "5 km", "cannot depart"],
+      "source_hint": "PPL Textbook — Air Law"
+    },
+    {
+      "id": 24,
+      "category": "applied",
+      "question": "What actions should a pilot take if carburetor icing is suspected during flight?",
+      "ground_truth": "",
+      "expected_keywords": ["carburetor heat", "full hot", "RPM drop", "monitor"],
+      "source_hint": "PPL Textbook / AFM — Systems"
+    },
+    {
+      "id": 25,
+      "category": "applied",
+      "question": "How do you calculate weight and balance for a flight with two passengers and baggage?",
+      "ground_truth": "",
+      "expected_keywords": ["moment", "arm", "CG", "envelope", "limits"],
+      "source_hint": "AFM/POH — Weight and Balance"
+    },
+    {
+      "id": 26,
+      "category": "applied",
+      "question": "What is the correct procedure for entering a controlled airspace?",
+      "ground_truth": "",
+      "expected_keywords": ["clearance", "ATC", "contact", "authorization"],
+      "source_hint": "PPL/CPL Textbook — Air Law"
+    },
+    {
+      "id": 27,
+      "category": "applied",
+      "question": "If you encounter windshear on final approach, what should you do?",
+      "ground_truth": "",
+      "expected_keywords": ["go-around", "full power", "pitch", "escape"],
+      "source_hint": "CPL/ATPL Textbook — Meteorology / SOP"
+    },
+    {
+      "id": 28,
+      "category": "applied",
+      "question": "How should a pilot adjust the altimeter when transitioning from one pressure area to another?",
+      "ground_truth": "",
+      "expected_keywords": ["QNH", "reset", "local pressure", "ATIS"],
+      "source_hint": "PPL Textbook — Instruments"
+    },
+    {
+      "id": 29,
+      "category": "applied",
+      "question": "What is the procedure for a short field takeoff?",
+      "ground_truth": "",
+      "expected_keywords": ["flaps", "full power", "brakes", "rotation speed", "obstacle clearance"],
+      "source_hint": "AFM/POH — Normal Procedures"
+    },
+    {
+      "id": 30,
+      "category": "applied",
+      "question": "If the engine fails immediately after takeoff, what are the immediate actions?",
+      "ground_truth": "",
+      "expected_keywords": ["lower nose", "airspeed", "land ahead", "do not turn back"],
+      "source_hint": "SOP/Checklist — Emergency Procedures"
+    },
+    {
+      "id": 31,
+      "category": "applied",
+      "question": "How do you determine if an aircraft is within CG limits before flight?",
+      "ground_truth": "",
+      "expected_keywords": ["calculate", "moment", "total weight", "CG envelope", "chart"],
+      "source_hint": "AFM/POH — Weight and Balance"
+    },
+    {
+      "id": 32,
+      "category": "applied",
+      "question": "What should you do if you inadvertently enter IMC while flying VFR?",
+      "ground_truth": "",
+      "expected_keywords": ["180 degree turn", "ATC", "declare emergency", "instruments"],
+      "source_hint": "PPL/CPL Textbook — Emergency Procedures"
+    },
+    {
+      "id": 33,
+      "category": "applied",
+      "question": "How does increasing altitude affect engine performance in a normally aspirated engine?",
+      "ground_truth": "",
+      "expected_keywords": ["power decreases", "air density", "less oxygen"],
+      "source_hint": "CPL Textbook — Engines"
+    },
+    {
+      "id": 34,
+      "category": "applied",
+      "question": "What is the correct radio phraseology to request taxi clearance?",
+      "ground_truth": "",
+      "expected_keywords": ["callsign", "location", "request taxi", "information"],
+      "source_hint": "PPL Textbook — Radio Telephony"
+    },
+    {
+      "id": 35,
+      "category": "applied",
+      "question": "If you notice the oil pressure gauge reading zero during cruise, what should you do?",
+      "ground_truth": "",
+      "expected_keywords": ["reduce power", "land", "nearest suitable", "emergency"],
+      "source_hint": "SOP/Checklist — Emergency Procedures"
+    },
+    {
+      "id": 36,
+      "category": "applied",
+      "question": "How do you calculate the required runway length for takeoff at a high-altitude airport?",
+      "ground_truth": "",
+      "expected_keywords": ["performance chart", "density altitude", "temperature", "pressure altitude"],
+      "source_hint": "AFM/POH — Performance"
+    },
+    {
+      "id": 37,
+      "category": "applied",
+      "question": "What is the procedure for recovering from a spin?",
+      "ground_truth": "",
+      "expected_keywords": ["power idle", "opposite rudder", "forward stick", "neutral ailerons"],
+      "source_hint": "PPL/CPL Textbook — Flight Maneuvers"
+    },
+    {
+      "id": 38,
+      "category": "applied",
+      "question": "How should a pilot respond to a TCAS RA (Resolution Advisory)?",
+      "ground_truth": "",
+      "expected_keywords": ["follow", "immediately", "vertical guidance", "do not deviate"],
+      "source_hint": "ATPL Textbook / SOP — Instruments"
+    },
+    {
+      "id": 39,
+      "category": "applied",
+      "question": "What factors should be considered when planning a flight over water?",
+      "ground_truth": "",
+      "expected_keywords": ["life jackets", "survival equipment", "glide distance", "alternate"],
+      "source_hint": "CPL Textbook — Flight Planning"
+    },
+    {
+      "id": 40,
+      "category": "applied",
+      "question": "If you experience an electrical fire in flight, what is the immediate action?",
+      "ground_truth": "",
+      "expected_keywords": ["master switch", "off", "fire extinguisher", "ventilation"],
+      "source_hint": "SOP/Checklist — Emergency Procedures"
+    },
+    {
+      "id": 41,
+      "category": "reasoning",
+      "question": "Why is it dangerous to fly through a thunderstorm, and what are the recommended avoidance procedures?",
+      "ground_truth": "",
+      "expected_keywords": ["turbulence", "hail", "lightning", "avoid", "20 miles", "circumnavigate"],
+      "source_hint": "CPL/ATPL Textbook — Meteorology"
+    },
+    {
+      "id": 42,
+      "category": "reasoning",
+      "question": "Explain the relationship between angle of attack, lift, and stall.",
+      "ground_truth": "",
+      "expected_keywords": ["critical angle", "airflow separation", "lift decreases", "stall"],
+      "source_hint": "PPL/CPL Textbook — Principles of Flight"
+    },
+    {
+      "id": 43,
+      "category": "reasoning",
+      "question": "Why must a pilot consider both pressure altitude and temperature when calculating aircraft performance?",
+      "ground_truth": "",
+      "expected_keywords": ["density altitude", "air density", "performance", "combined effect"],
+      "source_hint": "CPL Textbook — Performance"
+    },
+    {
+      "id": 44,
+      "category": "reasoning",
+      "question": "What are the risks of spatial disorientation, and how can a pilot prevent it?",
+      "ground_truth": "",
+      "expected_keywords": ["vestibular", "illusions", "trust instruments", "training"],
+      "source_hint": "CPL/ATPL Textbook — Human Performance"
+    },
+    {
+      "id": 45,
+      "category": "reasoning",
+      "question": "Why is it important to lean the mixture at high altitude, and what happens if you don't?",
+      "ground_truth": "",
+      "expected_keywords": ["fuel-air ratio", "rich", "power loss", "efficiency"],
+      "source_hint": "CPL Textbook / AFM — Engine Operation"
+    },
+    {
+      "id": 46,
+      "category": "reasoning",
+      "question": "Explain the decision-making process for a go-around versus continuing an unstable approach.",
+      "ground_truth": "",
+      "expected_keywords": ["stabilized", "criteria", "safety", "go-around", "better option"],
+      "source_hint": "SOP — Standard Operating Procedures"
+    },
+    {
+      "id": 47,
+      "category": "reasoning",
+      "question": "Why does an aircraft require more runway for takeoff on a hot day compared to a cold day?",
+      "ground_truth": "",
+      "expected_keywords": ["density altitude", "air density", "engine power", "lift"],
+      "source_hint": "CPL Textbook — Performance"
+    },
+    {
+      "id": 48,
+      "category": "reasoning",
+      "question": "What are the aerodynamic effects of ice accumulation on the wings, and why is it critical to remove it before flight?",
+      "ground_truth": "",
+      "expected_keywords": ["disrupts airflow", "reduces lift", "increases drag", "stall speed"],
+      "source_hint": "CPL/ATPL Textbook — Meteorology / Aerodynamics"
+    },
+    {
+      "id": 49,
+      "category": "reasoning",
+      "question": "Why is crew resource management (CRM) essential in multi-crew operations?",
+      "ground_truth": "",
+      "expected_keywords": ["communication", "decision-making", "workload", "safety", "teamwork"],
+      "source_hint": "ATPL Textbook — Human Factors"
+    },
+    {
+      "id": 50,
+      "category": "reasoning",
+      "question": "Explain why a pilot should not attempt to stretch a glide to reach a runway during an engine failure.",
+      "ground_truth": "",
+      "expected_keywords": ["stall", "airspeed", "control", "land short", "safer"],
+      "source_hint": "PPL/CPL Textbook — Emergency Procedures"
+    }
+  ]
+}
