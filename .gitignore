@@ -47,6 +47,9 @@ venv.bak/
 aviation_rag/ingestion.log
 aviation_rag/ingestion_fast.log
 
+# Generated evaluation reports (regenerate with evaluate_with_analysis.py)
+aviation_rag/evaluation_report.md
+
 # Data files (generated/cached)
 aviation_rag/data/faiss_index/*.faiss
 aviation_rag/data/faiss_index/*.pkl
