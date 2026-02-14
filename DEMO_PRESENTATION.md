@@ -432,30 +432,58 @@ Query → BM25 (keyword) + Vector (semantic) → RRF → Reranker → Top 5
 
 **"Here's our roadmap for enhancement..."**
 
-1. **Query Expansion**
-   - Expand acronyms automatically (VFR → Visual Flight Rules)
-   - Add aviation-specific synonyms
-   - Expected: +5-10% retrieval improvement
+#### Priority 1: Critical Improvements (Next 2-4 weeks)
 
-2. **Table & Chart Extraction**
-   - Extract performance tables from PDFs
-   - Parse weight & balance charts
-   - Handle visual information
+1. **Improve Applied Question Retrieval (-14.3% gap)**
+   - Query classification & routing
+   - Adaptive chunking for procedures
+   - Dynamic retrieval pool (top_k=30 for applied questions)
+   - Expected: +10-15% on applied questions
 
-3. **Multi-turn Conversations**
-   - Add conversation memory
-   - Follow-up questions
-   - Context-aware responses
+2. **Reduce No-Answer Rate (32% → 20%)**
+   - Adaptive thresholds based on query type
+   - Fallback to baseline if hybrid returns no answer
+   - Expected: -12% no-answer rate
 
-4. **Fine-tuned Embeddings**
+3. **Query Expansion for Aviation Acronyms**
+   - Expand "VFR" → "Visual Flight Rules" + "VFR"
+   - Auto-extract acronyms from documents
+   - Expected: +5-10% on factual questions
+
+#### Priority 2: Performance Enhancements
+
+4. **GPU Acceleration**
+   - Currently: 27s average latency (CPU)
+   - With GPU: 3-5s target latency
+   - 80% faster inference
+
+5. **Caching Layer**
+   - Redis cache for common queries
+   - Instant responses (<100ms) for cached
+   - Better scalability
+
+#### Priority 3: Advanced Features
+
+6. **Multi-Modal Processing**
+   - Extract tables (performance charts, weight & balance)
+   - Understand diagrams and charts
+   - Expected: +15-20% coverage
+
+7. **Conversational Memory**
+   - Multi-turn conversations
+   - Follow-up questions with context
+   - Better user experience
+
+8. **Fine-Tuned Embeddings**
    - Train on aviation corpus
-   - Better semantic understanding
-   - Domain-specific representations
+   - Domain-specific semantic understanding
+   - Expected: +10-15% retrieval
 
-5. **GPU Acceleration**
-   - Currently runs on CPU (37s model load)
-   - With GPU: 5-10s load time
-   - Faster inference (1-3s vs 10-30s)
+**Target Performance After Improvements:**
+- Retrieval Hit Rate: 68% → 80-85%
+- Faithfulness: 0.742 → 0.80-0.85
+- No-Answer Rate: 32% → 15-20%
+- Latency: 27s → 3-5s (with GPU)
 
 ---
 
