@@ -4,400 +4,643 @@
       "id": 1,
       "category": "factual",
       "question": "What does VFR stand for and what does it require?",
-      "ground_truth": "",
-      "expected_keywords": ["Visual Flight Rules", "visibility", "cloud clearance"],
+      "ground_truth": "Based on the provided context, specifically from [Source: 7-Flight-Planning-and-Monitoring-2014.pdf, Page: 157], we can find the answer.\n\nVFR stands for Visual Flight Rules. According to the text, \"IFR and VFR flights are permitted; IFR flights are subject to ATC service and are separated from other IFR flights.\" This indicates that VFR requires visual navigation, as opposed to Instrument Flight Rules (IFR), which require instruments to navigate.\n\nAdditionally, from [Source: 7-Flight-Planning-and-Monitoring-2014.pdf, Page: 135], we can see that the Jeppesen VFR + GPS Chart is designed for VMC (Visual Meteorological Conditions) flight in accordance with VFR. This further supports the idea that VFR requires visual navigation.\n\nTherefore, the answer is:\n\nVFR stands for Visual Flight Rules and it requires visual navigation.",
+      "expected_keywords": [
+        "Visual Flight Rules",
+        "visibility",
+        "cloud clearance"
+      ],
       "source_hint": "PPL Textbook — Air Law / Meteorology chapter"
     },
     {
       "id": 2,
       "category": "factual",
       "question": "What is the minimum safe altitude over a congested area?",
-      "ground_truth": "",
-      "expected_keywords": ["1000 feet", "highest obstacle", "congested"],
+      "ground_truth": "This information is not available in the provided document(s).\n\nHowever, based on general aviation principles and regulations, the minimum safe altitude over a congested area would typically be determined by considering factors such as:\n\n* The accuracy of the aircraft's altimeter\n* The inherent inaccuracies of altimeters and their indications plus corrections required to account for temperature and pressure variations in relation to ISA (Source: 7-Flight-Planning-and-Monitoring-2014.pdf, Page: 138)\n* The characteristics of the terrain\n* Rotor turbulence and standing waves\n* The accuracy of the navigational chart\n* The vertical extensions of Danger, Restricted and Prohibited areas\n\nIn general, a safe altitude over a congested area would be at least 1,000 feet above ground level (AGL) or as specified by local regulations. However, without specific information on the location and conditions of the congested area in question, it is not possible to provide a definitive answer.\n\nIt's worth noting that the Minimum Obstruction Clearance Altitude (MOCA) is typically used for navigation over terrain, but this may not be directly applicable to congested areas. The Minimum En Route IFR Altitude (MEA) and Minimum Sector Altitude (MSA) are also relevant considerations in certain situations, but again, these would depend on the specific conditions of the flight.\n\nIn any case, it is essential for pilots to consult relevant aeronautical charts, NOTAMs, and other sources of information to determine the minimum safe altitude for their specific route and conditions.",
+      "expected_keywords": [
+        "1000 feet",
+        "highest obstacle",
+        "congested"
+      ],
       "source_hint": "PPL Textbook — Air Law"
     },
     {
       "id": 3,
       "category": "factual",
       "question": "Define ATPL and list the privileges it grants.",
-      "ground_truth": "",
-      "expected_keywords": ["Airline Transport Pilot License", "commercial air transport", "captain"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "Airline Transport Pilot License",
+        "commercial air transport",
+        "captain"
+      ],
       "source_hint": "ATPL Textbook — Licensing"
     },
     {
       "id": 4,
       "category": "factual",
       "question": "What are the three types of hypoxia?",
-      "ground_truth": "",
-      "expected_keywords": ["hypoxic", "anaemic", "stagnant", "histotoxic"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "hypoxic",
+        "anaemic",
+        "stagnant",
+        "histotoxic"
+      ],
       "source_hint": "CPL/ATPL Textbook — Human Performance"
     },
     {
       "id": 5,
       "category": "factual",
       "question": "What is the purpose of a pre-flight checklist?",
-      "ground_truth": "",
-      "expected_keywords": ["safety", "systematic", "aircraft airworthy"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "safety",
+        "systematic",
+        "aircraft airworthy"
+      ],
       "source_hint": "SOP/Checklist"
     },
     {
       "id": 6,
       "category": "factual",
       "question": "What does METAR stand for?",
-      "ground_truth": "",
-      "expected_keywords": ["Meteorological Aerodrome Report", "weather"],
+      "ground_truth": "METAR stands for Meteorological Aerodrome Report. \n\n[Source: Meteorology full book.pdf, Page: 477]",
+      "expected_keywords": [
+        "Meteorological Aerodrome Report",
+        "weather"
+      ],
       "source_hint": "PPL/CPL Textbook — Meteorology"
     },
     {
       "id": 7,
       "category": "factual",
       "question": "What is the standard temperature lapse rate in the troposphere?",
-      "ground_truth": "",
-      "expected_keywords": ["2 degrees", "1000 feet", "lapse rate"],
+      "ground_truth": "According to [Source: Meteorology full book.pdf, Page: 12], the ICAO International Standard Atmosphere (ISA) defines an 'average' atmosphere from -5 km (-16 400 ft) to 80 km (262 464 ft). For practical purposes, we just need to look at the ISA between mean sea level and 20 km.\n\nIn this range, the temperature lapse rate is given as 0.65°C/100 m (1.98°C/1000 ft) up to 11 km (36 090 ft), and then it remains constant at -56.5°C up to 20 km (65 617 ft).\n\nHowever, practically we use a lapse rate of 2°/1000 ft for calculations up to the Tropopause.\n\nTherefore, the standard temperature lapse rate in the troposphere is approximately 2°/1000 ft.",
+      "expected_keywords": [
+        "2 degrees",
+        "1000 feet",
+        "lapse rate"
+      ],
       "source_hint": "ATPL Textbook — Meteorology"
     },
     {
       "id": 8,
       "category": "factual",
       "question": "What is V1 speed?",
-      "ground_truth": "",
-      "expected_keywords": ["decision speed", "takeoff", "continue", "abort"],
+      "ground_truth": "The V1 speed is defined as the maximum speed at which the pilot must take the first action in order to stop the aeroplane within the remaining accelerate-stop distance (Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 380). It is also the minimum speed following engine failure that the pilot is able to continue the take-off within the remaining take-off distance.",
+      "expected_keywords": [
+        "decision speed",
+        "takeoff",
+        "continue",
+        "abort"
+      ],
       "source_hint": "AFM/POH — Performance"
     },
     {
       "id": 9,
       "category": "factual",
       "question": "What does the acronym PAVE stand for in risk assessment?",
-      "ground_truth": "",
-      "expected_keywords": ["Pilot", "Aircraft", "Environment", "External pressures"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "Pilot",
+        "Aircraft",
+        "Environment",
+        "External pressures"
+      ],
       "source_hint": "PPL Textbook — Human Factors"
     },
     {
       "id": 10,
       "category": "factual",
       "question": "What is the maximum demonstrated crosswind component for this aircraft?",
-      "ground_truth": "",
-      "expected_keywords": ["crosswind", "knots", "demonstrated"],
+      "ground_truth": "This information is not available in the provided document(s). The context only discusses general principles and examples of wind calculations, but it does not provide specific information about a particular aircraft's maximum demonstrated crosswind component.",
+      "expected_keywords": [
+        "crosswind",
+        "knots",
+        "demonstrated"
+      ],
       "source_hint": "AFM/POH — Limitations"
     },
     {
       "id": 11,
       "category": "factual",
       "question": "What are the required documents that must be on board an aircraft?",
-      "ground_truth": "",
-      "expected_keywords": ["registration", "airworthiness", "operating limitations", "weight and balance"],
+      "ground_truth": "Based on the provided context, the following documents must be on board an aircraft:\n\n1. Mass and Balance documentation (as per EU-OPS 1 - Extract, Page 12)\n2. Flight Data Recorder (FDR) (as per Instruments.pdf, Page 507)\n\nAdditionally, while not explicitly stated as required to be on board, it is implied that the following documents should also be available:\n\n* A copy of the final Mass and Balance documentation as accepted by the commander (when mass and balance documentation is sent via datalink)\n* The Air Information Publication (AIP) or equivalent primary source document (as per 7-Flight-Planning-and-Monitoring-2014.pdf, Page 9)\n\nPlease note that this answer is based on the provided context, which may not be exhaustive.",
+      "expected_keywords": [
+        "registration",
+        "airworthiness",
+        "operating limitations",
+        "weight and balance"
+      ],
       "source_hint": "PPL Textbook — Air Law"
     },
     {
       "id": 12,
       "category": "factual",
       "question": "What is the definition of IFR?",
-      "ground_truth": "",
-      "expected_keywords": ["Instrument Flight Rules", "weather conditions", "instruments"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "Instrument Flight Rules",
+        "weather conditions",
+        "instruments"
+      ],
       "source_hint": "CPL Textbook — Air Law"
     },
     {
       "id": 13,
       "category": "factual",
       "question": "What is the purpose of the pitot tube?",
-      "ground_truth": "",
-      "expected_keywords": ["airspeed", "dynamic pressure", "ram air"],
+      "ground_truth": "The purpose of the pitot tube is to sense the total (static plus dynamic) pressure, which together with the static pressure already in the tube provides the required total (pitot) pressure. [Source: Instruments.pdf, Page: 19]\n\nIn more detail, the pitot tube brings the moving airstream to rest in the tube, generating the extra (dynamic) pressure that is added to the static pressure already present in the tube, resulting in a direct measurement of the total pressure. This total pressure is then transmitted up the pitot pipelines to the ASI and Machmeter for display. [Source: Instruments.pdf, Page: 19]",
+      "expected_keywords": [
+        "airspeed",
+        "dynamic pressure",
+        "ram air"
+      ],
       "source_hint": "PPL Textbook — Instruments"
     },
     {
       "id": 14,
       "category": "factual",
       "question": "What does QNH represent?",
-      "ground_truth": "",
-      "expected_keywords": ["altimeter setting", "sea level", "pressure"],
+      "ground_truth": "QNH represents the barometric pressure at the airfield (QFE), converted to mean sea level (MSL) using the ISA temperature at the airfield and the ISA pressure lapse rate. This will provide a pressure which does not account for any temperature deviation away from ISA.\n\n[Source: Meteorology full book.pdf, Page: 27]",
+      "expected_keywords": [
+        "altimeter setting",
+        "sea level",
+        "pressure"
+      ],
       "source_hint": "PPL Textbook — Instruments / Meteorology"
     },
     {
       "id": 15,
       "category": "factual",
       "question": "What is the standard atmospheric pressure at sea level?",
-      "ground_truth": "",
-      "expected_keywords": ["1013.25", "hectopascals", "29.92", "inches"],
+      "ground_truth": "According to [Source: Meteorology full book.pdf, Page: 23], the standard unit of force is the NEWTON (N) and an average for atmospheric pressure at sea level is 101 325 newtons per square metre (pascals). For simplicity, this is expressed as 1013.25 hectopascals (hPa).\n\nTherefore, the answer is:\n\n1013.25 hPa",
+      "expected_keywords": [
+        "1013.25",
+        "hectopascals",
+        "29.92",
+        "inches"
+      ],
       "source_hint": "ATPL Textbook — Meteorology"
     },
     {
       "id": 16,
       "category": "factual",
       "question": "What is the function of ailerons?",
-      "ground_truth": "",
-      "expected_keywords": ["roll", "lateral control", "wings"],
+      "ground_truth": "According to [Source: Instruments.pdf, Page: 373], when aileron pressure is released with an angle of bank less than or equal to 6 degrees, the Autopilot (A/P) rolls the wings level and holds the existing heading.\n\nHowever, this question seems to be asking about the function of ailerons in general, not specifically in relation to autopilot systems. In that case, I would refer to [Source: Instruments.pdf, Page: 379], which mentions that trim on light aircraft is provided in all three axes through mechanical linkages to trim tabs on the control surfaces, including aileron trim.\n\nA more direct answer can be found in general aviation knowledge, but since it's not explicitly mentioned in the provided context, I'll provide an inference based on common understanding: Ailerons are used to control roll and maintain lateral stability of the aircraft. They help to bank the wing up or down to change direction or maintain a steady course.\n\nNote that this answer is based on general knowledge and not directly extracted from the provided documents.",
+      "expected_keywords": [
+        "roll",
+        "lateral control",
+        "wings"
+      ],
       "source_hint": "PPL Textbook — Principles of Flight"
     },
     {
       "id": 17,
       "category": "factual",
       "question": "What is the definition of density altitude?",
-      "ground_truth": "",
-      "expected_keywords": ["pressure altitude", "temperature", "performance"],
+      "ground_truth": "According to [Source: Meteorology full book.pdf, Page: 37], \"Density may be defined as mass per unit volume and may be expressed as... The altitude in the standard atmosphere to which the observed density corresponds - density altitude.\"\n\nAdditionally, [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 193] states that \"Density Altitude is a high Density Altitude is one that represents a higher altitude in the International Standard Atmosphere\".\n\nTherefore, the definition of density altitude can be summarized as:\n\n\"Density Altitude is the altitude in the standard atmosphere to which the observed density corresponds.\"\n\nThis information is available in both [Source: Meteorology full book.pdf] and [Source: 6-mass-and-balance-and-performance-2014.pdf].",
+      "expected_keywords": [
+        "pressure altitude",
+        "temperature",
+        "performance"
+      ],
       "source_hint": "CPL Textbook — Performance"
     },
     {
       "id": 18,
       "category": "factual",
       "question": "What is the purpose of trim tabs?",
-      "ground_truth": "",
-      "expected_keywords": ["reduce", "control pressure", "maintain attitude"],
+      "ground_truth": "The purpose of trim tabs is to relieve the pilot of forces on the aircraft controls while maintaining aircraft attitude (Source: Instruments.pdf, Page: 367). In other words, trim tabs help to reduce the stick forces required by the pilot to maintain a steady flight path.",
+      "expected_keywords": [
+        "reduce",
+        "control pressure",
+        "maintain attitude"
+      ],
       "source_hint": "PPL Textbook — Aircraft Systems"
     },
     {
       "id": 19,
       "category": "factual",
       "question": "What does CAVOK mean?",
-      "ground_truth": "",
-      "expected_keywords": ["Ceiling And Visibility OK", "visibility", "10 km", "cloud"],
+      "ground_truth": "CAVOK is an abbreviation for \"cloud, ceiling and visibility are OK.\" It is used in METAR reports when the following conditions are met:\n\n* The visibility must be 10 kilometres or more.\n* The height of the lowest cloud must be no less than 5000 ft, or the level of highest minimum sector altitude, whichever is the greater.\n* There must be no cumulonimbus or 'towering cumulus' (TCU) present.\n* There must be no significant weather at or in the vicinity of the aerodrome.\n\n[Source: Meteorology full book.pdf, Page: 482]",
+      "expected_keywords": [
+        "Ceiling And Visibility OK",
+        "visibility",
+        "10 km",
+        "cloud"
+      ],
       "source_hint": "CPL/ATPL Textbook — Meteorology"
     },
     {
       "id": 20,
       "category": "factual",
       "question": "What is the maximum takeoff weight listed in the aircraft limitations?",
-      "ground_truth": "",
-      "expected_keywords": ["maximum", "takeoff", "weight", "pounds", "kilograms"],
+      "ground_truth": "According to the provided context, the maximum take-off mass (MTOM) is listed as 62,800 kg on Page 81 of [Source: 7-Flight-Planning-and-Monitoring-2014.pdf]. \n\nTherefore, the answer is:\nMaximum Take-off Mass (MTOM): 62,800 kg.",
+      "expected_keywords": [
+        "maximum",
+        "takeoff",
+        "weight",
+        "pounds",
+        "kilograms"
+      ],
       "source_hint": "AFM/POH — Limitations"
     },
     {
       "id": 21,
       "category": "applied",
       "question": "If the outside air temperature is higher than standard, how does this affect density altitude and aircraft performance?",
-      "ground_truth": "",
-      "expected_keywords": ["density altitude increases", "performance decreases", "reduced climb"],
+      "ground_truth": "Based on the provided context from [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 193] and [Source: Meteorology full book.pdf, Page: 38], we can analyze the effect of higher outside air temperature on density altitude and aircraft performance.\n\nWhen the outside air temperature is higher than standard, it means that the actual air temperature is greater than the \"Standard\" air temperature at a given altitude. According to the context, this will result in a decrease in air density (DENSITY IS INVERSELY PROPORTIONAL TO TEMPERATURE).\n\nAs a consequence of decreased air density, the Density Altitude will increase. This is because the aircraft is experiencing a lower air density than what would be expected at a given altitude in the International Standard Atmosphere.\n\nIncreased Density Altitude affects aircraft performance by reducing Excess Thrust and therefore the ability to climb (or accelerate). This is particularly relevant for take-off and initial climb from an airfield, where any increase in pressure altitude or air temperature due to local meteorological conditions will reduce Excess Thrust.\n\nIn summary, a higher outside air temperature than standard will result in:\n\n* Decreased air density\n* Increased Density Altitude\n* Reduced aircraft performance (Excess Thrust and ability to climb)\n\nThis information is based on the principles described in [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 193] and [Source: Meteorology full book.pdf, Page: 38].",
+      "expected_keywords": [
+        "density altitude increases",
+        "performance decreases",
+        "reduced climb"
+      ],
       "source_hint": "CPL Textbook — Performance"
     },
     {
       "id": 22,
       "category": "applied",
       "question": "During a pre-flight inspection, you notice a small dent on the leading edge of the wing. What should you do?",
-      "ground_truth": "",
-      "expected_keywords": ["consult", "maintenance", "airworthiness", "MEL"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "consult",
+        "maintenance",
+        "airworthiness",
+        "MEL"
+      ],
       "source_hint": "SOP/Checklist"
     },
     {
       "id": 23,
       "category": "applied",
       "question": "You are planning a VFR flight and the forecast shows visibility of 4 km. Can you legally depart?",
-      "ground_truth": "",
-      "expected_keywords": ["VFR minima", "visibility", "5 km", "cannot depart"],
+      "ground_truth": "Based on the provided context from [Source: 7-Flight-Planning-and-Monitoring-2014.pdf, Page: 18], which discusses Air Information Publications, specifically ENR 5.1 - PROHIBITED, RESTRICTED AND DANGER AREAS.\n\nAccording to the document, for safety reasons, pilots must take into account various factors when planning a VFR flight, including air navigation obstacles en route, such as bridges and chimneys. However, there is no specific information provided regarding visibility requirements for departing on a VFR flight.\n\nHowever, based on general principles of aviation regulations, it can be inferred that the pilot would need to ensure they have sufficient visibility to safely navigate their planned route. The International Civil Aviation Organization (ICAO) recommends a minimum visibility of 1 km for VFR flight planning [Source: ICAO Annex 2, Chapter 5].\n\nGiven this information and assuming no other specific regulations or restrictions are mentioned in the provided context, it can be concluded that:\n\nThis answer is based on general principles and not directly stated in the provided document.",
+      "expected_keywords": [
+        "VFR minima",
+        "visibility",
+        "5 km",
+        "cannot depart"
+      ],
       "source_hint": "PPL Textbook — Air Law"
     },
     {
       "id": 24,
       "category": "applied",
       "question": "What actions should a pilot take if carburetor icing is suspected during flight?",
-      "ground_truth": "",
-      "expected_keywords": ["carburetor heat", "full hot", "RPM drop", "monitor"],
+      "ground_truth": "Based on the provided context, particularly from [Source: Meteorology full book.pdf, Page: 299], Piston Engine Induction Icing section:\n\nIf carburetor icing is suspected during flight, the pilot should take immediate action to prevent damage. According to the text, carburetor icing can occur at temperatures between -10°C and +30°C, and it can be particularly severe between -2°C and +15°C.\n\nTo mitigate this risk, pilots are advised to use engine anti-icing equipment when there is precipitation and the indicated outside air temperature is +10°C and below (Source: Meteorology full book.pdf, Page: 294). Additionally, using engine igniters in potential icing conditions can help prevent engine failure (Source: Meteorology full book.pdf, Page: 294).\n\nTherefore, if carburetor icing is suspected during flight, the pilot should:\n\n1. Engage engine anti-icing equipment.\n2. Use engine igniters to maintain engine performance.\n\nIt's essential for pilots to be aware of the conditions conducive to carburetor icing and take proactive measures to prevent damage to their aircraft.",
+      "expected_keywords": [
+        "carburetor heat",
+        "full hot",
+        "RPM drop",
+        "monitor"
+      ],
       "source_hint": "PPL Textbook / AFM — Systems"
     },
     {
       "id": 25,
       "category": "applied",
       "question": "How do you calculate weight and balance for a flight with two passengers and baggage?",
-      "ground_truth": "",
-      "expected_keywords": ["moment", "arm", "CG", "envelope", "limits"],
+      "ground_truth": "To calculate weight and balance for a flight with two passengers and baggage, we need to follow the procedures outlined in EU-OPS 1.\n\nFirst, let's consider the passengers. Since there are only two passengers, we can use the standard mass values specified in Table 2 (Page 11). According to Table 2, the standard masses for male and female passengers are:\n\n* Male: 104 kg\n* Female: 86 kg\n\nAssuming both passengers are adults, we will use the \"all adult\" mass value of 95 kg (which is not explicitly stated in the table, but can be inferred as an average of the male and female values).\n\nFor baggage, since there are only two passengers, we need to determine the actual mass of checked baggage. According to EU-OPS 1 (Page 10), for flights with 19 or less passenger seats, the actual mass of checked baggage must be used.\n\nTherefore, we will weigh the baggage immediately prior to boarding and at an adjacent location to determine its actual mass.\n\nTo calculate the weight and balance, we need to consider the following factors:\n\n* The total number of passengers (2)\n* The standard masses of each passenger (95 kg x 2 = 190 kg)\n* The actual mass of checked baggage (to be determined by weighing)\n\nWe will also need to account for any additional baggage or cargo on board.\n\nOnce we have determined the actual mass of the baggage, we can calculate the total weight of the aircraft and perform a balance calculation to ensure that the center of gravity is within the acceptable limits.\n\nIt's worth noting that this is a simplified example, and in practice, you would need to consider many other factors, such as the type of aircraft, the flight plan, and any specific requirements or restrictions.",
+      "expected_keywords": [
+        "moment",
+        "arm",
+        "CG",
+        "envelope",
+        "limits"
+      ],
       "source_hint": "AFM/POH — Weight and Balance"
     },
     {
       "id": 26,
       "category": "applied",
       "question": "What is the correct procedure for entering a controlled airspace?",
-      "ground_truth": "",
-      "expected_keywords": ["clearance", "ATC", "contact", "authorization"],
+      "ground_truth": "According to [Source: 7-Flight-Planning-and-Monitoring-2014.pdf, Page: 160], when entering a controlled airspace, an aircraft must follow the procedures specified by Air Traffic Control (ATC). The correct procedure is not explicitly stated in this section, but it can be inferred that ATC clearance is required to enter controlled airspace.\n\nHowever, [Source: 7-Flight-Planning-and-Monitoring-2014.pdf, Page: 232] provides more information on the acceptance of a flight plan. According to this document, if the flight plan is submitted for the purpose of obtaining air traffic control service, the aircraft is required to wait for an ATC clearance prior to proceeding under the conditions requiring compliance with ATC procedures.\n\nTherefore, based on these principles, the correct procedure for entering a controlled airspace would be:\n\n1. File a flight plan that includes the route and altitude requirements for entry into the controlled airspace.\n2. Wait for ATC clearance before proceeding into the controlled airspace.\n\nThis is in accordance with the general principle of obtaining ATC clearance prior to entering controlled airspace.",
+      "expected_keywords": [
+        "clearance",
+        "ATC",
+        "contact",
+        "authorization"
+      ],
       "source_hint": "PPL/CPL Textbook — Air Law"
     },
     {
       "id": 27,
       "category": "applied",
       "question": "If you encounter windshear on final approach, what should you do?",
-      "ground_truth": "",
-      "expected_keywords": ["go-around", "full power", "pitch", "escape"],
+      "ground_truth": "Based on the provided context from [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 292], if you encounter windshear on final approach, you should initiate a missed approach and increase power to go-around power. The nose should be raised, and the aeroplane flown in accordance with the missed approach procedure.\n\nIn particular, it is stated that \"Any hope of a stabilized approach should be abandoned and a missed approach should be initiated. Without hesitation the power should be increased to go-around power, the nose raised and the aeroplane flown in accordance with the missed approach procedure.\"",
+      "expected_keywords": [
+        "go-around",
+        "full power",
+        "pitch",
+        "escape"
+      ],
       "source_hint": "CPL/ATPL Textbook — Meteorology / SOP"
     },
     {
       "id": 28,
       "category": "applied",
       "question": "How should a pilot adjust the altimeter when transitioning from one pressure area to another?",
-      "ground_truth": "",
-      "expected_keywords": ["QNH", "reset", "local pressure", "ATIS"],
+      "ground_truth": "According to the provided context, specifically from \"Meteorology full book.pdf, Page: 134\", a pilot should reset the altimeter subscale setting to take account of changes in surface atmospheric pressure. This can be done by altering the altimeter subscale setting to set QFE, QNH or SPS for use when flying to ensure more accurate readings.\n\nAdditionally, from \"Instruments.pdf, Page: 62\", it is mentioned that the variable datum mechanism allows the instrument to be set to indicate height above any desired pressure datum. The pilot can turn the knob until the desired pressure level appears on a pressure subscale on the face of the instrument, and then the altimeter will indicate the aircraft's height above this pressure level.\n\nTherefore, when transitioning from one pressure area to another, a pilot should adjust the altimeter by resetting the subscale setting to match the new pressure level. This ensures that the altimeter reading accurately reflects the true altitude of the aircraft in relation to the surrounding air pressure.\n\nIt is also worth noting that according to \"Instruments.pdf, Page: 134\", when flying at a constant indicated altitude, outside air pressure must remain the same. To achieve this, pilots must fly along a pressure level. However, when transitioning from one pressure area to another, the pilot should adjust the altimeter accordingly to ensure accurate readings.\n\nSource:\nMeteorology full book.pdf, Page: 134\nInstruments.pdf, Page: 62",
+      "expected_keywords": [
+        "QNH",
+        "reset",
+        "local pressure",
+        "ATIS"
+      ],
       "source_hint": "PPL Textbook — Instruments"
     },
     {
       "id": 29,
       "category": "applied",
       "question": "What is the procedure for a short field takeoff?",
-      "ground_truth": "",
-      "expected_keywords": ["flaps", "full power", "brakes", "rotation speed", "obstacle clearance"],
+      "ground_truth": "According to [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 347], a \"maximum effort\" take-off, in other words a short field take-off, involves reducing the aeroplane's mass and V1. The procedure is detailed on page 34 of section 4 in CAP 698.\n\nTo perform a short field takeoff, you should:\n\n* Reduce the aeroplane's mass\n* Reduce V1\n\nIt is also recommended to go through examples in CAP 698, specifically one at the bottom of page 2 and the other at the top of page 6 in section 3, to help with graph work and understand when to apply various factors.\n\nNote: This information is based on the provided context and may not be an exhaustive list of procedures for a short field takeoff.",
+      "expected_keywords": [
+        "flaps",
+        "full power",
+        "brakes",
+        "rotation speed",
+        "obstacle clearance"
+      ],
       "source_hint": "AFM/POH — Normal Procedures"
     },
     {
       "id": 30,
       "category": "applied",
       "question": "If the engine fails immediately after takeoff, what are the immediate actions?",
-      "ground_truth": "",
-      "expected_keywords": ["lower nose", "airspeed", "land ahead", "do not turn back"],
+      "ground_truth": "Based on the provided context, if the engine fails immediately after takeoff, the immediate actions would be to:\n\n1. Take the first action (e.g., apply brakes, reduce thrust, deploy speed brakes) to stop the aeroplane within the remaining accelerate-stop distance [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 380].\n2. The decision speed V1 is exceeded, and the pilot must take immediate action to abort the take-off.\n\nThe correct procedure in this situation would be to follow the rules for V1 as stated in CAP 698 on page 2 of section 4 [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 380]. The decision speed V1 is exceeded, and the pilot must take immediate action to abort the take-off.\n\nTherefore, the immediate actions would be to:\n\n* Apply brakes or reduce thrust\n* Deploy speed brakes (if available)\n* Abort the take-off\n\nThis information is based on the principles described in [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 380].",
+      "expected_keywords": [
+        "lower nose",
+        "airspeed",
+        "land ahead",
+        "do not turn back"
+      ],
       "source_hint": "SOP/Checklist — Emergency Procedures"
     },
     {
       "id": 31,
       "category": "applied",
       "question": "How do you determine if an aircraft is within CG limits before flight?",
-      "ground_truth": "",
-      "expected_keywords": ["calculate", "moment", "total weight", "CG envelope", "chart"],
+      "ground_truth": "To determine if an aircraft is within CG limits before flight, you need to calculate the Centre of Gravity (CG) position at Take-Off Mass (TOM) and Zero Fuel Mass (ZFM). \n\nAccording to [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 49], you divide the moment of the TOM by the TOM to determine the CG position at take-off. This is done as follows:\n\n(TOM CG position = 310 290 ÷ 3642 = 85.2 inches aft of the datum)\n\nYou also need to check the Operating Manual to ensure that the CG is within limits at both the ZFM and TOM situations. If this is the case, then the CG will remain within the limits throughout the flight.\n\nAdditionally, you can use a Centre of Gravity Envelope for the aircraft, which is a graphical representation of the mass and centre of gravity limits. This envelope shows the acceptable range of CG positions for different masses.\n\nIt's also worth noting that if the CG is within limits at the ZFM, it is not normally necessary to calculate the landing CG position for large aircraft, as stated in [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 50]. However, for light aircraft, it is usual to determine the landing CG position.",
+      "expected_keywords": [
+        "calculate",
+        "moment",
+        "total weight",
+        "CG envelope",
+        "chart"
+      ],
       "source_hint": "AFM/POH — Weight and Balance"
     },
     {
       "id": 32,
       "category": "applied",
       "question": "What should you do if you inadvertently enter IMC while flying VFR?",
-      "ground_truth": "",
-      "expected_keywords": ["180 degree turn", "ATC", "declare emergency", "instruments"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "180 degree turn",
+        "ATC",
+        "declare emergency",
+        "instruments"
+      ],
       "source_hint": "PPL/CPL Textbook — Emergency Procedures"
     },
     {
       "id": 33,
       "category": "applied",
       "question": "How does increasing altitude affect engine performance in a normally aspirated engine?",
-      "ground_truth": "",
-      "expected_keywords": ["power decreases", "air density", "less oxygen"],
+      "ground_truth": "Based on the provided context, specifically from [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 185], it is stated that \"A turbojet engine is un-supercharged. Increasing Density Altitude (lower air density) will reduce the mass flow through the engine and Thrust Available will decrease.\"\n\nHowever, this information is specific to a turbojet engine. For a normally aspirated engine, which does not have a compressor or turbine, the effect of increasing altitude on engine performance would be different.\n\nAccording to [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 409], it is stated that \"For a given take-off mass, the maximum brake energy limit speed (VMBE), as an indicated airspeed, will: decrease with increasing altitude, and decrease with increasing temperature.\"\n\nThis suggests that in a normally aspirated engine, increasing altitude would lead to a decrease in VMBE, which implies a reduction in engine performance.\n\nTherefore, based on this information, the answer is:\n\nIncreasing altitude affects engine performance in a normally aspirated engine by decreasing its maximum brake energy limit speed (VMBE), leading to reduced engine performance.",
+      "expected_keywords": [
+        "power decreases",
+        "air density",
+        "less oxygen"
+      ],
       "source_hint": "CPL Textbook — Engines"
     },
     {
       "id": 34,
       "category": "applied",
       "question": "What is the correct radio phraseology to request taxi clearance?",
-      "ground_truth": "",
-      "expected_keywords": ["callsign", "location", "request taxi", "information"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "callsign",
+        "location",
+        "request taxi",
+        "information"
+      ],
       "source_hint": "PPL Textbook — Radio Telephony"
     },
     {
       "id": 35,
       "category": "applied",
       "question": "If you notice the oil pressure gauge reading zero during cruise, what should you do?",
-      "ground_truth": "",
-      "expected_keywords": ["reduce power", "land", "nearest suitable", "emergency"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "reduce power",
+        "land",
+        "nearest suitable",
+        "emergency"
+      ],
       "source_hint": "SOP/Checklist — Emergency Procedures"
     },
     {
       "id": 36,
       "category": "applied",
       "question": "How do you calculate the required runway length for takeoff at a high-altitude airport?",
-      "ground_truth": "",
-      "expected_keywords": ["performance chart", "density altitude", "temperature", "pressure altitude"],
+      "ground_truth": "To calculate the required runway length for takeoff at a high-altitude airport, we need to consider several factors.\n\nFirst, we must determine the gross take-off distance (GTD) required. This can be found in the aeroplane flight manual or by using performance data provided by the manufacturer.\n\nAccording to CS-23 regulations [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 346], when calculating the GTD, we must account for:\n\n* The mass of the aeroplane at the start of the take-off run\n* The pressure altitude at the aerodrome (in this case, a high-altitude airport)\n* The ambient temperature at the aerodrome\n* The runway surface conditions and the type of runway surface\n* The runway slope\n\nAdditionally, we must also consider any headwind or tailwind components. According to CS-23 regulations [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 346], not more than 50% of the reported headwind component or not less than 150% of the reported tailwind component should be used.\n\nOnce we have calculated the GTD, we must then apply any necessary corrections to determine the take-off distance available (TODA). This can be done by multiplying the GTD by a factor of 1.15 [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 346].\n\nFinally, we must ensure that the TODA does not exceed the runway length available at the airport. If it does, then additional measures may be necessary to reduce the take-off mass or to select a different runway.\n\nTherefore, to calculate the required runway length for takeoff at a high-altitude airport, we need to:\n\n1. Determine the gross take-off distance (GTD) required\n2. Apply any necessary corrections to determine the take-off distance available (TODA)\n3. Ensure that the TODA does not exceed the runway length available at the airport\n\nNote: This answer is based on the provided context and may require additional information or calculations depending on the specific aeroplane and airport conditions.",
+      "expected_keywords": [
+        "performance chart",
+        "density altitude",
+        "temperature",
+        "pressure altitude"
+      ],
       "source_hint": "AFM/POH — Performance"
     },
     {
       "id": 37,
       "category": "applied",
       "question": "What is the procedure for recovering from a spin?",
-      "ground_truth": "",
-      "expected_keywords": ["power idle", "opposite rudder", "forward stick", "neutral ailerons"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "power idle",
+        "opposite rudder",
+        "forward stick",
+        "neutral ailerons"
+      ],
       "source_hint": "PPL/CPL Textbook — Flight Maneuvers"
     },
     {
       "id": 38,
       "category": "applied",
       "question": "How should a pilot respond to a TCAS RA (Resolution Advisory)?",
-      "ground_truth": "",
-      "expected_keywords": ["follow", "immediately", "vertical guidance", "do not deviate"],
+      "ground_truth": "According to the provided context, on receipt of a TCAS Resolution Advisory (RA), the action is to:\n\n\"initiate the required manoeuvre immediately, adjusting flight path, aircraft power and trim accordingly.\"\n\n[Source: Instruments.pdf, Page: 499]\n\nAdditionally, crew members not involved in executing this manoeuvre should confirm that the sky ahead is clear of other aircraft and continue the visual search for the established threat. They are to inform ATC as soon as possible of any deviation from an ATC clearance.\n\nIt's also worth noting that RAs may be disregarded only when pilots visually identify the potentially conflicting traffic and decide no deviation from the current flight path is needed.",
+      "expected_keywords": [
+        "follow",
+        "immediately",
+        "vertical guidance",
+        "do not deviate"
+      ],
       "source_hint": "ATPL Textbook / SOP — Instruments"
     },
     {
       "id": 39,
       "category": "applied",
       "question": "What factors should be considered when planning a flight over water?",
-      "ground_truth": "",
-      "expected_keywords": ["life jackets", "survival equipment", "glide distance", "alternate"],
+      "ground_truth": "Based on the provided context, particularly from [Source: 11-radio-navigation-2014.pdf, Page: 106], several factors affecting ADF range should be considered when planning a flight over water:\n\n1. NDB transmission power: The range is proportional to the square root of the power output.\n2. Frequency: Lower frequencies result in greater surface wave (greater diffraction, lower attenuation) and thus a longer range.\n3. Receiver quality: This affects the overall accuracy and reliability of the ADF system.\n\nAdditionally, it's essential to note that NDB range is generally greater over water compared to land. However, using calculated ranges does not guarantee that the aircraft will be within the Designated Operational Condition (DOC).\n\nIt's also worth mentioning that when flying over water, particularly at night or in areas with scattered lights below, pilots may become disoriented and confuse scattered lights with stars above, as described in [Source: 10-General-Navigation-2014 (1).pdf, Page: 233].",
+      "expected_keywords": [
+        "life jackets",
+        "survival equipment",
+        "glide distance",
+        "alternate"
+      ],
       "source_hint": "CPL Textbook — Flight Planning"
     },
     {
       "id": 40,
       "category": "applied",
       "question": "If you experience an electrical fire in flight, what is the immediate action?",
-      "ground_truth": "",
-      "expected_keywords": ["master switch", "off", "fire extinguisher", "ventilation"],
+      "ground_truth": "This information is not available in the provided document(s). The context only discusses Ground Proximity Warning System (GPWS) and Enhanced GPWS (EGPWS), but does not mention procedures for dealing with an electrical fire.",
+      "expected_keywords": [
+        "master switch",
+        "off",
+        "fire extinguisher",
+        "ventilation"
+      ],
       "source_hint": "SOP/Checklist — Emergency Procedures"
     },
     {
       "id": 41,
       "category": "reasoning",
       "question": "Why is it dangerous to fly through a thunderstorm, and what are the recommended avoidance procedures?",
-      "ground_truth": "",
-      "expected_keywords": ["turbulence", "hail", "lightning", "avoid", "20 miles", "circumnavigate"],
+      "ground_truth": "According to the provided context from Meteorology full book.pdf (Page 245), flying through a thunderstorm is hazardous due to various reasons:\n\n1. Turbulence: Thunderstorms can produce violent turbulence both within cloud and at their sides, which can be dangerous during take-off and landing and may result in windshear.\n2. Hail: Hail can cause severe skin damage to the airframe and can occur up to a height of 45,000 feet.\n3. Lightning: Although lightning is not a reliable guide to the degree of turbulence in a cloud, it can still pose a significant threat.\n\nThe recommended avoidance procedures are:\n\n1. Avoid flying over the top of a thunderstorm whenever possible (Meteorology full book.pdf, Page 258).\n2. Do not contemplate flying beneath the cumulonimbus cloud due to the dangers associated with turbulence, rain, hail, snow or lightning, low cloud base, poor visibility, and possibly low-level windshear.\n3. If it is necessary to penetrate an area of cloud which may contain cumulonimbus clouds, follow the procedures and techniques recommended in Meteorology full book.pdf (Page 258).\n\nThe specific avoidance criteria for thunderstorms using airborne radar are provided in Figure 14.8 (Meteorology full book.pdf, Page 243) and summarized as follows:\n\n* If above 20,000 ft, avoid by a minimum of 20 NM.\n* If below 20,000 ft, avoid by a minimum of 10 NM.\n\nIt is also recommended to use weather information from ATC radar to supplement the aircraft's weather radar (Meteorology full book.pdf, Page 268).",
+      "expected_keywords": [
+        "turbulence",
+        "hail",
+        "lightning",
+        "avoid",
+        "20 miles",
+        "circumnavigate"
+      ],
       "source_hint": "CPL/ATPL Textbook — Meteorology"
     },
     {
       "id": 42,
       "category": "reasoning",
       "question": "Explain the relationship between angle of attack, lift, and stall.",
-      "ground_truth": "",
-      "expected_keywords": ["critical angle", "airflow separation", "lift decreases", "stall"],
+      "ground_truth": "Based on the context provided from \"Instruments.pdf\" (Page: 450), we can explain the relationship between angle of attack, lift, and stall as follows:\n\nThe angle of attack (AoA) is the angle between the chord line of the wing and the direction of the relative airflow. As the AoA increases, lift also increases up to a critical value at which it begins to decrease due to separation of the slow-moving air from the upper surface of the wing. This results in stall, where the wing assumes a stalled condition.\n\nIn other words, as the angle of attack increases, lift initially increases, but beyond a certain point (the stalling angle), lift decreases, and the aircraft enters a stall. This is because the airflow separates from the wing's upper surface, leading to reduced lift and potentially catastrophic consequences if not corrected in time.\n\nThis relationship is described in the context as follows: \"Lift increases as the AoA increases up to some critical value at which it begins to decrease due to separation of the slow-moving air (the boundary layer) from the upper surface of the wing, which, in turn, results in separation and turbulence of the main airflow.\"",
+      "expected_keywords": [
+        "critical angle",
+        "airflow separation",
+        "lift decreases",
+        "stall"
+      ],
       "source_hint": "PPL/CPL Textbook — Principles of Flight"
     },
     {
       "id": 43,
       "category": "reasoning",
       "question": "Why must a pilot consider both pressure altitude and temperature when calculating aircraft performance?",
-      "ground_truth": "",
-      "expected_keywords": ["density altitude", "air density", "performance", "combined effect"],
+      "ground_truth": "A pilot must consider both pressure altitude and temperature when calculating aircraft performance because air density is affected by both factors.\n\nAccording to the document \"6-mass-and-balance-and-performance-2014.pdf, Page: 193\", air density affects the mass flow of air into the engine, and a decrease in air density reduces Thrust Available. Air density is presented on performance graphs as two components: Temperature and Pressure Altitude. Any variation in atmospheric pressure or temperature will change air density and therefore Excess Thrust.\n\nAdditionally, the document \"Meteorology full book.pdf, Page: 141\" states that to determine true altitude and for the assessment of performance data it is necessary to determine the temperature deviation from the ISA at any specified altitude. This implies that temperature has a significant impact on aircraft performance.\n\nFurthermore, the document \"Instruments.pdf, Page: 31\" explains that air temperature affects engine power because it affects the density of the air, which in turn affects the fuel/air ratio and therefore the power produced by the engine.\n\nTherefore, considering both pressure altitude and temperature is crucial for accurate calculation of aircraft performance.",
+      "expected_keywords": [
+        "density altitude",
+        "air density",
+        "performance",
+        "combined effect"
+      ],
       "source_hint": "CPL Textbook — Performance"
     },
     {
       "id": 44,
       "category": "reasoning",
       "question": "What are the risks of spatial disorientation, and how can a pilot prevent it?",
-      "ground_truth": "",
-      "expected_keywords": ["vestibular", "illusions", "trust instruments", "training"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "vestibular",
+        "illusions",
+        "trust instruments",
+        "training"
+      ],
       "source_hint": "CPL/ATPL Textbook — Human Performance"
     },
     {
       "id": 45,
       "category": "reasoning",
       "question": "Why is it important to lean the mixture at high altitude, and what happens if you don't?",
-      "ground_truth": "",
-      "expected_keywords": ["fuel-air ratio", "rich", "power loss", "efficiency"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "fuel-air ratio",
+        "rich",
+        "power loss",
+        "efficiency"
+      ],
       "source_hint": "CPL Textbook / AFM — Engine Operation"
     },
     {
       "id": 46,
       "category": "reasoning",
       "question": "Explain the decision-making process for a go-around versus continuing an unstable approach.",
-      "ground_truth": "",
-      "expected_keywords": ["stabilized", "criteria", "safety", "go-around", "better option"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "stabilized",
+        "criteria",
+        "safety",
+        "go-around",
+        "better option"
+      ],
       "source_hint": "SOP — Standard Operating Procedures"
     },
     {
       "id": 47,
       "category": "reasoning",
       "question": "Why does an aircraft require more runway for takeoff on a hot day compared to a cold day?",
-      "ground_truth": "",
-      "expected_keywords": ["density altitude", "air density", "engine power", "lift"],
+      "ground_truth": "Based on the principles described in [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 161], when the temperature increases (hot day), the air density decreases. As a result, the aircraft's performance is affected, leading to an increase in take-off distance.\n\nAccording to the document, \"Even on a smooth runway there will be rolling resistance due to the bearing friction and tyre distortion.\" Additionally, if the runway is contaminated by snow, slush or standing water, there will be additional drag due to fluid resistance and impingement. This drag will increase with speed, until a critical speed is reached.\n\nHowever, in this case, we are considering a hot day without any contamination on the runway. The primary reason for the increased take-off distance on a hot day is the decrease in air density, which affects the aircraft's performance.\n\nThe document does not provide specific information about the effect of temperature on take-off distance. However, based on general principles, it can be inferred that an increase in temperature would lead to a decrease in air density, resulting in increased drag and reduced lift. This would require more runway for takeoff compared to a cold day.\n\nTherefore, the answer is: The aircraft requires more runway for takeoff on a hot day compared to a cold day because of the decreased air density, which increases drag and reduces lift.\n\nNote: This inference is based on general principles and not explicitly stated in the provided documents.",
+      "expected_keywords": [
+        "density altitude",
+        "air density",
+        "engine power",
+        "lift"
+      ],
       "source_hint": "CPL Textbook — Performance"
     },
     {
       "id": 48,
       "category": "reasoning",
       "question": "What are the aerodynamic effects of ice accumulation on the wings, and why is it critical to remove it before flight?",
-      "ground_truth": "",
-      "expected_keywords": ["disrupts airflow", "reduces lift", "increases drag", "stall speed"],
+      "ground_truth": "According to the provided context from Meteorology full book.pdf (Page 292), the aerodynamic effects of ice accumulation on the wings include:\n\n* Reduced lift\n* Increased drag\n* Increased weight\n* Increased stalling speed\n* Increased fuel consumption\n\nIce, frost, or snow with a thickness and roughness similar to coarse sandpaper can reduce lift by 30% and increase drag by 40%. This is because ice tends to form on leading edges, thereby spoiling the aerodynamic shape of the wing.\n\nIt is critical to remove ice accumulation before flight because it can lead to reduced control and stability of the aircraft. The uneven weight distribution caused by ice accumulation can displace the Centre of Gravity (C of G), making the aircraft more difficult to handle. Additionally, ice on propeller blades can cause severe engine vibration, and ice breaking off propellers can cause skin damage.\n\nTherefore, it is essential to remove any ice or snow from the airframe before take-off to ensure safe flight operations.",
+      "expected_keywords": [
+        "disrupts airflow",
+        "reduces lift",
+        "increases drag",
+        "stall speed"
+      ],
       "source_hint": "CPL/ATPL Textbook — Meteorology / Aerodynamics"
     },
     {
       "id": 49,
       "category": "reasoning",
       "question": "Why is crew resource management (CRM) essential in multi-crew operations?",
-      "ground_truth": "",
-      "expected_keywords": ["communication", "decision-making", "workload", "safety", "teamwork"],
+      "ground_truth": "This information is not available in the provided document(s).",
+      "expected_keywords": [
+        "communication",
+        "decision-making",
+        "workload",
+        "safety",
+        "teamwork"
+      ],
       "source_hint": "ATPL Textbook — Human Factors"
     },
     {
       "id": 50,
       "category": "reasoning",
       "question": "Explain why a pilot should not attempt to stretch a glide to reach a runway during an engine failure.",
-      "ground_truth": "",
-      "expected_keywords": ["stall", "airspeed", "control", "land short", "safer"],
+      "ground_truth": "Based on the principles described in [Source: 6-mass-and-balance-and-performance-2014.pdf, Page: 227], if a pilot attempts to stretch the glide by raising the nose of the aeroplane, the speed will decrease and the glide angle will steepen. This is because VMD (the minimum drag speed) is the speed at which excess drag is minimized, and flying at this speed allows for the smallest possible glide angle.\n\nWhen the nose is raised, the weight apparent thrust decreases, causing the aeroplane to slow down. As a result, the aeroplane will no longer be flying at VMD, and therefore will not have the best lift-drag ratio. This leads to a steeper descent angle despite the initial impression that the glide is being extended.\n\nTherefore, attempting to stretch the glide by raising the nose of the aeroplane can actually lead to a shorter range and a less optimal landing site, rather than extending it. The correct approach is to fly at VMD, which allows for the smallest possible glide angle and maximizes the horizontal distance covered during the glide.",
+      "expected_keywords": [
+        "stall",
+        "airspeed",
+        "control",
+        "land short",
+        "safer"
+      ],
       "source_hint": "PPL/CPL Textbook — Emergency Procedures"
     }
   ]

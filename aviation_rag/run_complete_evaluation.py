@@ -49,7 +49,6 @@ def main():
     try:
         result = subprocess.run(
             [sys.executable, "generate_ground_truth.py", "--port", str(port)],
-            cwd="aviation_rag",
             check=True,
             capture_output=False
         )
@@ -66,7 +65,6 @@ def main():
     try:
         result = subprocess.run(
             [sys.executable, "evaluate_with_analysis.py", "--port", str(port)],
-            cwd="aviation_rag",
             check=True,
             capture_output=False
         )
@@ -80,9 +78,9 @@ def main():
     logger.success("✓ COMPLETE EVALUATION PIPELINE FINISHED")
     logger.info("="*80)
     logger.info("\nGenerated files:")
-    logger.info("  1. aviation_rag/questions.json (updated with ground truth)")
-    logger.info("  2. aviation_rag/data/eval_results.json (detailed metrics)")
-    logger.info("  3. aviation_rag/evaluation_report.md (qualitative analysis)")
+    logger.info("  1. questions.json (updated with ground truth)")
+    logger.info("  2. data/eval_results.json (detailed metrics)")
+    logger.info("  3. evaluation_report.md (qualitative analysis)")
     logger.info("\nNext steps:")
     logger.info("  - Review evaluation_report.md for insights")
     logger.info("  - Check best/worst answers section")

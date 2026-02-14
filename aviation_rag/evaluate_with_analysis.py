@@ -347,7 +347,7 @@ class EnhancedEvaluator:
     
     def save_report(self, report_text: str):
         """Save markdown report"""
-        report_path = "aviation_rag/evaluation_report.md"
+        report_path = "evaluation_report.md"
         
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(report_text)
